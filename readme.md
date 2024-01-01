@@ -1,1 +1,1 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+(https://github.com/GetRatCat/connectors/actions/workflows/hello-world.yml/badge.svg)
