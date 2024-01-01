@@ -9,13 +9,14 @@ jobs:
         uses: actions/setup-python@v3
         with:
             python-version: 3.11
+            virtualenvs-in-project: false
       - name: Install pip
         run: python3 -m pip install --upgrade pip
       - name: Install poetry
         run: pip install poetry
       - name: Install packages
         run: poetry install
-      - name: Install pytest
-        run: pip install pytest
+#      - name: Install pytest
+#        run: pip install pytest
       - name: Run tests
         run: pytest
