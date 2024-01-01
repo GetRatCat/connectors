@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "holz-robotics-connectors"
+version = "0.0.1"
+description = "FTP and SMB connector class for everyday usage"
+authors = ["GetRatCat <40700039+GetRatCat@users.noreply.github.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11.2"
+pysmb = "^1.2.9.1"
+pydantic-settings = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
