@@ -39,8 +39,11 @@ class SMBConnector(BaseConnector):
         full_pattern = "/".join([self._work_dir, f"*.{extension}"])
         self.conn.deleteFiles(self._shared_folder, full_pattern, delete_folders)
 
-    def connect(self):
-        assert self.conn.connect()
+    def create_connection(self):
+        assert self.conn.connect(ip=self._host, port=self._port,)
+
+    def close_connection(self):
+        self.conn.close()
 
     def get_all_files(self, dirname: str = "") -> list[SMBFile]:
         full_path = "/".join([self._work_dir, dirname])

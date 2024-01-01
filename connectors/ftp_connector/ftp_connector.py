@@ -21,9 +21,12 @@ class FTPConnector(BaseConnector):
         )
         self.conn.encoding = "latin-1"
 
-    def connect(self):
+    def create_connection(self):
         assert self.conn.connect(host=self._host, port=self._port)
         self.conn.login(user=self._username, passwd=self._password)
+
+    def close_connection(self):
+        self.conn.close()
 
     def delete_file(self, filename: str) -> str:
         return self.conn.delete(filename=filename)
