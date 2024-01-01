@@ -13,11 +13,9 @@ jobs:
         run: python3 -m pip install --upgrade pip
       - name: Install poetry
         run: pip install poetry
-      - name: Activate VENV
-        run: poetry shell
       - name: Install packages
         run: poetry install
-#      - name: Install pytest
-#        run: pip install pytest
+      - name: Install pytest
+        run: pip install pytest
       - name: Run tests
         run: pytest
